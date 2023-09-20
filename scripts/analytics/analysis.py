@@ -60,5 +60,8 @@ print("Outliers:", outliers1)
 
 ### Creating automated Report
 
-report = ProfileReport(df['Age'])
-report.to_file('eda_report.html')
+
+df1 = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/HHA_507_2023/main/WK3/data/trinetx/lab_result.csv')
+
+report = ProfileReport(df1)
+report.to_file('processed/us_census_report.html')
